@@ -1,0 +1,59 @@
+[
+    {
+        "name": "生产不合格品品审",
+        "componentName": "UnqualifiedProductReport",
+        "formKey": "UnqualifiedProductReview",
+        "keyData": [
+            {
+                "columnName": "disposalHandleId",
+                "label": "纠正措施",
+                "options": [
+                    {
+                        "id": 1,
+                        "name": "返工"
+                    },
+                    {
+                        "id": 2,
+                        "name": "返修"
+                    },
+                    {
+                        "id": 3,
+                        "name": "让步回用"
+                    },
+                    {
+                        "id": 4,
+                        "name": "报废"
+                    },
+                    {
+                        "id": 5,
+                        "name": "物料转换"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "物料评审",
+        "componentName": "MaterialBomReview",
+        "formKey": "MaterialBomReview",
+        "keyData": [],
+        "primaryColumns": [
+            {
+                "columnName": "materialCode",
+                "columnTitle": "物料编码"
+            },
+            {
+                "columnName": "materialName",
+                "columnTitle": "物料名称"
+            }
+        ],
+        "taskNameRules": "物料名称:materialName-物料编码:materialCode"
+    },
+    {
+        "name": "采购评审",
+        "componentName": "PurchaseOrderReview",
+        "formKey": "PurchaseOrderReview",
+        "keyData": [],
+        "taskNameRules": "采购单号:purchaseCode-供应商:supplierName"
+    }
+]

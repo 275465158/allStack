@@ -1,0 +1,35 @@
+package com.ecms.dal.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Table;
+
+/**
+ * @author Richie
+ * @version 2018/12/18 10:10
+ */
+@Table(name = "unqualified_handle")
+public class UnqualifiedHandleEntity extends BaseCompanyAndStatusEntity {
+    //类型:0:来料，1:生产
+    @Column(name = "handle_type")
+    private Integer handleType;
+
+    //处理名称
+    @Column(name = "handle_name")
+    private String handleName;
+
+    public Integer getHandleType() {
+        return handleType;
+    }
+
+    public void setHandleType(Integer handleType) {
+        this.handleType = handleType;
+    }
+
+    public String getHandleName() {
+        return handleName;
+    }
+
+    public void setHandleName(String handleName) {
+        this.handleName = handleName;
+    }
+}

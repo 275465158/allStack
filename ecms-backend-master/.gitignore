@@ -1,0 +1,18 @@
+*.java.hsp
+*.sonarj
+*.sw*
+.DS_Store
+.settings
+.springBeans
+.git
+target/
+logs/
+
+# IDEA artifacts and output dirs
+*.iml
+*.ipr
+*.iws
+.idea
+/.project
+/.classpath
+log.path_IS_UNDEFINED/

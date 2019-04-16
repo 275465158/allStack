@@ -1,0 +1,20 @@
+CREATE TABLE `equipment_manage` (
+  `id` bigint(32) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id主键',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新建时间',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `equipment_number` int(32) unsigned NOT NULL COMMENT '设备编号',
+  `equipment_name` varchar(11) DEFAULT NULL COMMENT '设备名称',
+  `equipment_model` varchar(11) DEFAULT NULL COMMENT '设备型号',
+  `vender` varchar(32) DEFAULT NULL COMMENT '厂家',
+  `dept_id` int(20) unsigned DEFAULT NULL COMMENT '所属部门关联id',
+  `equipment_status` int(11) unsigned DEFAULT NULL COMMENT '设备状态，0:正常，1:保养，2:维修，3:停用',
+  `produce_date` varchar(32) NOT NULL COMMENT '出厂日期',
+  `post_id` int(20) unsigned DEFAULT NULL COMMENT '岗位id',
+  `equipment_price` decimal(12,2) DEFAULT NULL COMMENT '价格',
+  `company_id` int(11) unsigned NOT NULL COMMENT '公司编号',
+  `status` int(1) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `equipment_number` (`equipment_number`),
+  UNIQUE KEY `equipment_number_2` (`equipment_number`),
+  UNIQUE KEY `equipment_number_3` (`equipment_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;

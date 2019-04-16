@@ -1,0 +1,22 @@
+CREATE TABLE `production_log` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `production_type` varchar(255) NOT NULL COMMENT '生产类型',
+  `product_name` varchar(255) NOT NULL COMMENT '产品名称',
+  `product_batch` varchar(255) NOT NULL COMMENT '生产项次',
+  `plan_product_date` varchar(255) NOT NULL COMMENT '计划生产日期',
+  `product_time` varchar(255) NOT NULL COMMENT '生产日期',
+  `latest_product_date` varchar(255) CHARACTER SET utf32 NOT NULL COMMENT '最晚生产日期',
+  `materiel_num` int(11) unsigned NOT NULL COMMENT '数量',
+  `company_id` int(11) unsigned NOT NULL COMMENT '公司id',
+  `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `status` int(1) unsigned NOT NULL DEFAULT '1' COMMENT '状态:1 正常，2 失效',
+  `production_number` varchar(255) NOT NULL COMMENT '生产单号',
+  `qualified_num` int(11) unsigned DEFAULT NULL COMMENT '合格数',
+  `unQualified_num` int(11) unsigned DEFAULT NULL COMMENT '不合格数',
+  `materiel_id` int(11) unsigned DEFAULT NULL COMMENT '物料id',
+  `original_material` varchar(255) DEFAULT NULL COMMENT '原图材料',
+  `material_unit` varchar(255) DEFAULT NULL COMMENT '单位',
+  `inbound_wait` int(1) unsigned DEFAULT NULL COMMENT '入库状态，1：待入库，2：已入库',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;

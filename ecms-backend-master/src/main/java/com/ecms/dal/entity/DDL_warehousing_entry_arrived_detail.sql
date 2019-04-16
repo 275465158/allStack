@@ -1,0 +1,25 @@
+CREATE TABLE `warehousing_entry_arrived_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` int(1) NOT NULL DEFAULT '1',
+  `company_id` int(11) NOT NULL,
+  `entry_id` int(11) NOT NULL COMMENT '待入库记录id',
+  `warehousing_entry_arrived_detail_arrived_qty` float DEFAULT NULL COMMENT '到货数量',
+  `warehousing_entry_arrived_detail_arrived_date` varchar(45) DEFAULT NULL COMMENT '到货时间',
+  `warehousing_entry_arrived_detail_consignee` varchar(45) DEFAULT NULL COMMENT '签收人',
+  `warehousing_entry_arrived_detail_status` varchar(45) DEFAULT NULL COMMENT '物料状态',
+  `warehousing_entry_arrived_detail_batch` varchar(45) DEFAULT NULL COMMENT '批次号',
+  `warehousing_entry_arrived_detail_qualified_qty` int(11) unsigned DEFAULT NULL,
+  `warehousing_entry_arrived_detail_unqualified_qty` int(11) unsigned DEFAULT NULL,
+  `warehousing_entry_arrived_detail_qualified_rate` varchar(255) DEFAULT NULL,
+  `warehousing_entry_arrived_detail_inspector` varchar(255) DEFAULT NULL,
+  `warehousing_entry_arrived_detail_inspect_date` varchar(255) DEFAULT NULL,
+  `warehousing_entry_arrived_detail_inspect_status` int(255) unsigned DEFAULT NULL,
+  `warehousing_entry_arrived_detail_entry_qty` int(11) unsigned DEFAULT NULL,
+  `warehousing_entry_arrived_detail_entry_date` datetime DEFAULT NULL,
+  `warehousing_entry_arrived_detail_entry_status` int(255) unsigned DEFAULT NULL,
+  `warehousing_entry_arrived_detail_expiry_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

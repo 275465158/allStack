@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+.git
+.editorconfig
+package-lock.json
+package.json
+package.json
+*.xml
+config.js
+workspace.xml
+package-lock.json
+.idea/
